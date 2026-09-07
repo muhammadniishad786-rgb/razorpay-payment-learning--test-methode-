@@ -1,0 +1,67 @@
+.order-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+  padding: 20px;
+}
+
+.order-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 45px 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dcfce7;
+  color: #16a34a;
+
+  border-radius: 50%;
+
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.order-card h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  color: #111827;
+}
+
+.order-card p {
+  margin-bottom: 30px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.order-card button {
+  border: none;
+  padding: 13px 25px;
+
+  background: #4f46e5;
+  color: white;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.order-card button:hover {
+  background: #4338ca;
+}

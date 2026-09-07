@@ -1,9 +1,12 @@
 // Import the CSS file for styling this component
+import { useNavigate } from "react-router-dom";
 import "./Payment.css";
 
 
 // Payment component
 function Payment() {
+
+  const navigate = useNavigate()
 
   // Amount displayed on our payment page
   const amount = 500;
@@ -100,7 +103,7 @@ function Payment() {
 
               // Payment is genuine and successfully verified
               alert("Payment verified successfully!");
-
+              navigate("/order-placed")
             } else {
 
               // Payment verification failed
