@@ -1,6 +1,6 @@
 // Import the CSS file for styling this component
 import { useNavigate } from "react-router-dom";
-import "./Payment.css";
+import "./payment.css";
 
 
 // Payment component
@@ -19,7 +19,7 @@ function Payment() {
 
       // Send a request to our backend to create a Razorpay order
       const response = await fetch(
-        "http://localhost:3000/api/payment/create-order",
+        "https://razorpay-backend-8kp5.onrender.com/api/payment/create-order",
         {
           // We are creating something, so we use POST
           method: "POST",
@@ -74,7 +74,7 @@ function Payment() {
             // Send the payment details to our backend
             // The backend will verify whether the payment is genuine
             const verifyResponse = await fetch(
-              "http://localhost:3000/api/payment/verify-order",
+              "https://razorpay-backend-8kp5.onrender.com/api/payment/verify-order",
               {
                 // We are sending payment details to the backend
                 method: "POST",
