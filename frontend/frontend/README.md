@@ -1,19 +1,59 @@
-# React + Vite
+# Razorpay Payment - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend part of the Razorpay payment learning project.
 
-Currently, two official plugins are available:
+## 🛠️ Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* React
+* Vite
+* JavaScript
+* CSS
+* Razorpay Checkout
 
-## React Compiler
+## 📌 Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+* Payment page UI
+* Creates payment order through backend API
+* Opens Razorpay Checkout
+* Sends payment details to backend for verification
+* Displays payment verification result
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## ▶️ Run the Project
 
-## Expanding the ESLint configuration
+Install dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## 🔐 Environment Variable
+
+Create a `.env` file:
+
+```env
+VITE_RAZORPAY_KEY_ID=your_test_key_id
+```
+
+> Only the Razorpay Key ID is used in the frontend. Never put the Razorpay Secret Key here.
+
+## 🔄 Payment Flow
+
+```text
+User clicks Pay
+       ↓
+Backend creates Razorpay order
+       ↓
+Razorpay Checkout opens
+       ↓
+User completes payment
+       ↓
+Payment details sent to backend
+       ↓
+Backend verifies payment
+```
