@@ -112,32 +112,64 @@
   opacity: 0.7;
 }
 
+/* Payment button */
+.pay-button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+
+  border-radius: 10px;
+
+  background: #4f46e5;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  /* Keep spinner and text centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
 /* Loading spinner */
 .spinner {
+  display: inline-block;
+
   width: 18px;
   height: 18px;
 
-  border: 3px solid #ffffff;
-  border-top: 3px solid transparent;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
 
   border-radius: 50%;
 
-  animation: spin 0.7s linear infinite;
+  animation: spinner-rotate 0.8s linear infinite;
+
+  flex-shrink: 0;
 }
 
+
 /* Spinner animation */
-@keyframes spin {
-  from {
+@keyframes spinner-rotate {
+  0% {
     transform: rotate(0deg);
   }
 
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
 
-.secure-payment {
-  margin-top: 20px;
-  color: #6b7280;
-  font-size: 13px;
+
+/* Disabled button */
+.pay-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
 }
