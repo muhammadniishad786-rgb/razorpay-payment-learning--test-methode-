@@ -90,6 +90,12 @@
   cursor: pointer;
 
   transition: 0.2s;
+
+  /* Added for spinner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .pay-button:hover {
@@ -98,6 +104,36 @@
 
 .pay-button:active {
   transform: scale(0.98);
+}
+
+/* Disable button while payment is loading */
+.pay-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+
+  border: 3px solid #ffffff;
+  border-top: 3px solid transparent;
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .secure-payment {
